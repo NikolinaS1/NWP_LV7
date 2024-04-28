@@ -1,0 +1,133 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+h1.title {
+  margin-bottom: 40px;
+}
+
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  width: auto;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+button {
+  margin-bottom: 15px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container div {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  width: 420px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-input {
+  margin: 30px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+button[type="project"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 70px;
+}
+
+.table-style th,
+.table-style td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-style th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+#register,
+#login,
+.auth-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logout {
+  float: right;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+#projects {
+  margin-right: 10px;
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .form-container 
+    h2 Registration
+    form(action="/register", method="POST")
+      div
+        label(for='name') Name:<br />
+        input(type='text', id='name', name='name', placeholder="Enter name", required)
+
+      div
+        label(for='email') Email:<br />
+        input(type='email', id='email', name='email', placeholder="Enter email", required)
+
+      div
+        label(for='password') Password:<br />
+        input(type='password', id='password', name='password', placeholder="Enter password", required)
+      
+      div 
+        a(href='/login', class='auth-link') Already have an account?
+
+      div 
+        button(type='submit', class='custom-button' id="register") Register

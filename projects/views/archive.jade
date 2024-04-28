@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  a(href='/logout', class='logout') Logout
+  h1.title Archived projects
+  link(rel='stylesheet', href='../public/stylesheets/style.css')
+  a(href='/', class='custom-button', id="projects") Back
+
+  if projects && projects.length > 0
+    table.table-style
+      thead
+        tr
+          th Name
+          th Description
+          th Price
+          th Completed jobs
+          th Start Date
+          th End Date
+          th Team
+          th Archived
+      tbody
+        each project in projects
+          tr
+            td= project.name
+            td= project.description
+            td= project.price
+            td= project.completed_jobs
+            td= project.start_date.toISOString().replace('T', ' ').substring(0, 10)
+            td= project.end_date.toISOString().replace('T', ' ').substring(0, 10)
+            td
+              - if (project.team && project.team.length > 0)
+                each member in project.team
+                  span= member.userId.name
+                  br
+              - else
+                p No team added
+            td= project.isArchived
+  else
+    p No projects archived.

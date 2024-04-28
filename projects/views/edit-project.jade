@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1.title Edit Project
+  a(href='/my-projects', class='custom-button') Back
+
+  form(method='POST', action=`/edit-project/${project._id}`, class='form-container') 
+    div
+      label(for='name') Name:<br/>
+      input(type='text', id='name', name='name', value=project.name, required)
+
+    div
+      label(for='description') Description:<br/>
+      input(type='text', id='description', name='description', value=project.description, required)
+
+    div
+      label(for='price') Price:<br/>
+      input(type='number', id='price', name='price', value=project.price, required)
+    
+    div
+      label(for='completed_jobs') Completed jobs (yes/no):
+      br
+      select(id='completed_jobs', name='completed_jobs', required)
+        option(value='Yes', selected=project.completed_jobs === 'Yes') Yes
+        option(value='No', selected=project.completed_jobs === 'No') No
+
+    div
+      label(for='start_date') Start Date:<br/>
+      input(type='date', id='start_date', name='start_date', value=start_date, required)
+
+    div
+      label(for='end_date') End Date:<br/>
+      input(type='date', id='end_date', name='end_date', value=end_date, required)
+
+    div
+      label(for='isArchived') Archived (yes/no):
+      br
+      select(id='isArchived', name='isArchived', required)
+        option(value='Yes', selected=project.isArchived === 'Yes') Yes
+        option(value='No', selected=project.isArchived === 'No') No
+
+    div
+      button(type='submit', class='custom-button') Update Project

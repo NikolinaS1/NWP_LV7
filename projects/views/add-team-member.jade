@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1.title Add team members
+  a(href='/my-projects', class='custom-button') Back
+  .form-container 
+    form(action=`/add-team-member/${projectId}`, method="POST")
+      each user in users
+        div(style="font-size: larger;")
+          input(type="checkbox", name=`teamMember_${user._id}`, value=user._id)
+          label(for=`teamMember_${user._id}`)= user.name
+      button(type="submit") Add
